@@ -24,7 +24,7 @@ $(document).ready(function() {
 		$("#enterNum").val("");
 		}
 	}
-$("#submit").on("click", game());
+$("#submit").on("click", game);
 $(document).on("keydown", function(event) {
 		if (event.which===13) {
 		game();
