@@ -5,12 +5,14 @@ $(document).ready(function() {
 
 	var game = function() {
 		var number= $("#enterNum").val();
-		if (isNaN(number)) {
+		if (isNaN(+number)) {
 			alert("You did not enter a number, try again");
-		} else if (number<0 || number>100) {
+		} else if (+number<0 || +number>100) {
 			alert("Pick a number BETWEEN 1 and 100");
+		} else if (+number%1!==0) {
+			alert("Integers only!");
 		} else {
-			for (var i=1;i<=number;i++) {
+			for (var i=1;i<=+number;i++) {
 				if (i%5===0 && i%3===0) {
 					$("body").append("<p class='gameNum'>FizzBuzz</p>");
 				} else if (i%3===0) {
