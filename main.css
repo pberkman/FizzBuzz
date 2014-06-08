@@ -1,0 +1,10 @@
+body {
+	margin:0 auto;
+	text-align:center;
+	font-family:georgia, sans-serif;
+}
+#instruct {
+	width:400px;
+	margin:0 auto;
+	line-height:1.5em;
+}
