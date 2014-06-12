@@ -1,7 +1,5 @@
 $(document).ready(function() {
-	$("#enterNum").click(function() {
-		$(".gameNum").remove();
-	})
+
 
 	var game = function() {
 		var number= $("#enterNum").val();
@@ -26,12 +24,15 @@ $(document).ready(function() {
 		$("#enterNum").val("");
 		}
 	}
-$("#submit").on("click", game);
-$(document).on("keydown", function(event) {
-		if (event.which===13) {
+	$("#submit").on("click", function() {
+		$(".gameNum").remove();
 		game();
-		}
-})
+	});
+	$(document).on("keydown", function(event) {
+			if (event.which===13) {
+			game();
+			}
+	})
 });
 
 
