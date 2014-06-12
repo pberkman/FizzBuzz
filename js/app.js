@@ -30,6 +30,7 @@ $(document).ready(function() {
 	});
 	$(document).on("keydown", function(event) {
 			if (event.which===13) {
+			$(".gameNum").remove();
 			game();
 			}
 	})
